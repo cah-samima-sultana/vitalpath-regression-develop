@@ -1,0 +1,15 @@
+{
+  "name": "node-test",
+  "version": "1.0.0",
+  "description": "script to test chrome in docker",
+  "main": "sample-test.js",
+  "scripts": {
+    "test": "node sample-test.js"
+  },
+  "dependencies": {
+    "child": "0.0.3",
+    "exec": "^0.2.1",
+    "selenium-webdriver": "^3.3.0",
+    "sys": "0.0.1"
+  }
+}

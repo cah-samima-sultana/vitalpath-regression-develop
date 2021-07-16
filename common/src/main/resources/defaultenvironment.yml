@@ -1,0 +1,11 @@
+servicesUrl: "http://localhost:8080/services"
+browserVersion: "Chrome Current"
+restClientAuthId: "vps"
+restClientAuthPwd: "vps"
+
+tenantId: '1'
+loginId: "test"
+loginPassword: "test"
+
+approverId: "drs"
+approverPassword: "drs"

@@ -1,0 +1,31 @@
+Running test suite against selenium grid (on test box)
+============================================================================
+
+Selenium Remote Grid Url
+   - Chrome Beta : http://10.206.1.55:4445/wd/hub
+   - Chrome Current : http://10.206.1.55:4444/wd/hub
+   - Chrome previous : http://10.206.1.55:4443/wd/hub
+
+VNC Viewer URL
+   - Chrome Beta : http://10.206.1.55:6001
+   - Chrome Current : http://10.206.1.55:6000
+   - Chrome previous : http://10.206.1.55:5999
+
+Exceute command from "vitalpath-regression" directory
+    Regression Suite
+        gradle -Dbrowser="remote" -DseleniumRemoteUrl=<<gridUrl>> -DbrowserWidth=<<width>> -DbrowserHeight=<<height>> -DappUrl=<<appUrl>> -DservicesUrl=<<serviceUrl>> <<:project:test>>
+
+    Smoke Suite
+        gradle -Dbrowser="remote" -DseleniumRemoteUrl=<<gridUrl>> -DbrowserWidth=<<width>> -DbrowserHeight=<<height>> -DappUrl=<<appUrl>> -DservicesUrl=<<serviceUrl>> -DsmokeTest="true" <<:project:test>>
+
+e.g. To run regression test
+
+        - gradle -Dbrowser="remote" -DseleniumRemoteUrl="http://10.206.1.55:4444/wd/hub" -DbrowserWidth="1024" -DbrowserHeight="768" -DappUrl="https://admdevsite1.cardinalhealth.net/latest/client/" -DservicesUrl="https://admdevsite1.cardinalhealth.net/services/" :client:test
+
+        - gradle -Dbrowser="remote" -DseleniumRemoteUrl="http://10.206.1.55:4444/wd/hub" -DbrowserWidth="640" -DbrowserHeight="600" -DappUrl="https://admdevsite1.cardinalhealth.net/latest/cabinet/" -DservicesUrl="https://admdevsite1.cardinalhealth.net/services/" :cabinet:test
+
+    To run smoke test
+
+        - gradle -Dbrowser="remote" -DseleniumRemoteUrl="http://10.206.1.55:4444/wd/hub" -DbrowserWidth="1024" -DbrowserHeight="768" -DappUrl="https://admdevsite1.cardinalhealth.net/latest/client/" -DservicesUrl="https://admdevsite1.cardinalhealth.net/services/" -DsmokeTest="true" :client:test
+
+        - gradle -Dbrowser="remote" -DseleniumRemoteUrl="http://10.206.1.55:4444/wd/hub" -DbrowserWidth="640" -DbrowserHeight="600" -DappUrl="https://admdevsite1.cardinalhealth.net/latest/cabinet/" -DservicesUrl="https://admdevsite1.cardinalhealth.net/services/" -DsmokeTest="true" :cabinet:test

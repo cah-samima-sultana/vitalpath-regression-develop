@@ -1,0 +1,129 @@
+Browsers:
+      - Chrome Beta
+      - Chrome Current
+      - Chrome Previous
+
+Setup:
+      'Site 1':
+          'Cabinet A / Door 1 / Shelf 2':
+              - ndc: '00069-3858-10'
+                name: 'Gemzar (NDC 00069-3858-10) TAI: 1000 MG'
+                dfgId: '1s'
+                isDrug: true
+                lotNumber: '123456'
+          'Cabinet A / Door 1 / Shelf 2 / Bin 1 / pocket1':
+              - ndc: '16729-0117-11'
+                name: 'Gemzar (NDC 16729-0117-11) TAI: 1000 MG'
+                dfgId: '1s'
+                isDrug: true
+              - ndc: '00002-7501-01'
+                name: 'Gemzar (NDC 00002-7501-01) TAI: 200 MG'
+                dfgId: '1s'
+                isDrug: true
+              - ndc: '00536-3222-01'
+                name: 'Acetaminophen (00536-3222-01) TAI: 325 MG'
+                dfgId: '1s'
+                isDrug: true
+          'Cabinet A / Door 1 / Shelf 2 / Bin 2 / pocket1':
+              - ndc: '16729-0276-68'
+                name: 'Fluorouracil (NDC 16729-0276-68) TAI: 500 MG'
+                dfgId: '1s'
+                isDrug: true
+          'Cabinet A / Door 1 / Shelf 2 / Bin 3 / pocket1':
+              - ndc: '00002-7502-01'
+                name: 'Gemzar (NDC 00002-7502-01) TAI: 200 MG'
+                dfgId: '1s'
+                isDrug: true
+              - ndc: '57896-0101-01'
+                name: 'Acetaminophen (57896-0101-01) TAI: 325 MG'
+                dfgId: '1s'
+                isDrug: true
+          'Cabinet A / Door 2':
+              - ndc: '00409-0183-01'
+                name: 'Gemzar (NDC 00409-0183-01) TAI: 200 MG'
+                dfgId: '1s'
+                isDrug: true
+          'Cabinet A / Door 2 / Shelf 1':
+              - ndc: '00002-7502-01'
+                name: 'Gemzar (NDC 00002-7502-01) TAI: 200 MG'
+                dfgId: '1s'
+                isDrug: true
+              - ndc: '62856-0797-01'
+                name: 'Aloxi (62856-0797-01) TAI: 250 MCG'
+                dfgId: '1s'
+                isDrug: true
+              - ndc: '00024-0591-20'
+                name: 'Eloxatin (NDC 00024-0591-20) TAI: 100 MG'
+                dfgId: '1s'
+                isDrug: true
+              - ndc: '00069-3033-20'
+                name: 'Doxorubicin HCl (NDC 00069-3033-20) TAI: 150 MG'
+                dfgId: '1s'
+                isDrug: true
+              - ndc: '00904-1982-60'
+                name: 'Acetaminophen (00904-1982-60) TAI: 325 MG'
+                dfgId: '1s'
+                isDrug: true
+          'Cabinet A / Door 2 / Shelf 1 / Bin 1 / pocket1':
+              - ndc: '63323-0516-10'
+                name: 'Decadron (NDC 63323-0516-10) TAI: 100 MG'
+                dfgId: '1s'
+                isDrug: true
+          'Cabinet A / Door 2 / Shelf 2':
+              - ndc: '00002-7501-01'
+                name: 'Gemzar (NDC 00002-7501-01) TAI: 200 MG'
+                dfgId: '1p'
+                isDrug: true
+              - ndc: '00069-3858-10'
+                name: 'Gemzar (NDC 00069-3858-10) TAI: 1000 MG'
+                dfgId: '1s'
+                isDrug: true
+          'Cabinet A / Door 2 / Shelf 3':
+              - ndc: '00409-0185-01'
+                name: 'Gemzar (NDC 00409-0185-01) TAI: 200 MG'
+                dfgId: '1s'
+                isDrug: true
+              - ndc: '00002-7501-01'
+                name: 'Gemzar (NDC 00002-7501-01) TAI: 200 MG'
+                dfgId: 'samples'
+                isDrug: true
+          'Cabinet A / Door 3 / Shelf 3':
+              - ndc: '55513-0190-01'
+                name: 'Neulasta (NDC 55513-0190-01) TAI: 6MG'
+                dfgId: '1s'
+                isDrug: true
+              - ndc: '55513-0192-01'
+                name: 'Neulasta (NDC 55513-0192-01) TAI: 6MG'
+                dfgId: '1s'
+                isDrug: true
+          'Cabinet A / Door 4 / Shelf 2 / Bin 3 / pocket1':
+              - ndc: '16729-0117-11'
+                name: 'Gemzar (NDC 16729-0117-11) TAI: 1000 MG'
+                dfgId: '1p'
+                isDrug: true
+          'Cabinet A / Door 4':
+              - ndc:
+                name: 'thermal paper'
+                dfgId: '1s'
+                isDrug: false
+          'Cabinet A / Drawer 8 / pocket1':
+              - ndc: '59011-0442-10'
+                name: 'Hydromorphone (Dilaudid) (NDC 59011-0442-10) TAI: 2 MG'
+                dfgId: '1s'
+                isDrug: true
+          'Cabinet B / Door 1 / Shelf 1 / Bin 1 / pocket1':
+              - ndc: '59572-0205-14'
+                name: 'Thalomid (NDC 59572-0205-14) TAI: 1400 MG'
+                dfgId: '1s'
+                isDrug: true
+          'Cabinet B / Door 3 / Shelf 1 / Bin 2 / pocket1':
+              - ndc: '55513-0111-01'
+                name: 'Aranesp (NDC 55513-0111-01) TAI: 300 MCG'
+                dfgId: '1s'
+                isDrug: true
+      'Site 2':
+          'Cabinet A / Door 1 / Shelf 2 / Bin 1 / pocket1':
+              - ndc: '16729-0117-11'
+                name: 'Gemzar (NDC 16729-0117-11) TAI: 1000 MG'
+                dfgId: '1s'
+                isDrug: true

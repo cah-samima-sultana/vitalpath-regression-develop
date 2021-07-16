@@ -1,0 +1,17 @@
+apply plugin: 'groovy'
+
+ext {
+    appUrl = 'http://localhost:8080/latest/client/'
+    servicesUrl = 'http://localhost:8080/services/'
+    browser = 'chrome'
+    browserVersion = 'Chrome Current'
+    browserWidth = '1024'
+    browserHeight = '768'
+    reportDir = 'build/spock-reports'
+}
+
+dependencies {
+    compile project(':common')
+}
+
+apply from: "../BrowserTestTasks.gradle"

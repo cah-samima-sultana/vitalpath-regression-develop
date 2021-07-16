@@ -1,0 +1,21 @@
+.gradle
+build/
+.idea/
+../.project
+.project
+vitalpath-regression.iml
+# Ignore Gradle GUI config
+gradle-app.setting
+bin
+gradle-local.properties
+
+cabinet/out
+cabinet/target/
+client/out
+client/target/
+common/out
+
+.gradletasknamecache
+*.iml
+node_modules
+*.swp

@@ -1,0 +1,13 @@
+apply plugin: 'groovy'
+
+ext {
+    servicesUrl = 'http://localhost:8080/services/'
+}
+
+task setUpSuiteData(type:JavaExec) {
+    systemProperty 'servicesUrl', System.getProperty('servicesUrl', project.servicesUrl)
+
+    classpath = sourceSets.main.runtimeClasspath
+
+    main = "com.cardinalhealth.vitalpath.datasetup.Suite"
+}

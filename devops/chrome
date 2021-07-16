@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# This script rests in place of the original 'chrome' binary and is 
+# used to make chrome launch with --no-sandbox when it's launched 
+# by selenium/chromedriver. Chrome-base is the original 'chrome' 
+# binary. CHROME_PATH is a --build-arg from Docker.
+
+CHROME_PATH/chrome-base --no-sandbox $@
+

@@ -1,0 +1,42 @@
+subprojects {
+    apply plugin: "groovy"
+
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+
+
+    ext {
+        groovyVersion = '2.4.5'
+        gebVersion = '1.1.1'
+        seleniumVersion = '3.4.0'
+    }
+
+    dependencies {
+
+        compile "org.codehaus.groovy:groovy-all:$groovyVersion"
+
+        compile "org.codehaus.groovy.modules.http-builder:http-builder:0.7"
+        compile "com.github.groovy-wslite:groovy-wslite:1.1.0"
+
+        compile "org.gebish:geb-junit4:$gebVersion"
+        compile "org.gebish:geb-spock:$gebVersion"
+        compile("org.spockframework:spock-core:1.0-groovy-2.4") {
+            exclude group: "org.codehaus.groovy"
+        }
+
+        compile( 'com.athaydes:spock-reports:1.3.0' ) {
+            transitive = false
+        }
+        compile 'org.slf4j:slf4j-api:1.7.13'
+        compile 'org.slf4j:slf4j-simple:1.7.13'
+
+        compile "org.seleniumhq.selenium:selenium-remote-driver:$seleniumVersion"
+        compile "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion"
+
+        compile "com.esotericsoftware.yamlbeans:yamlbeans:1.11"
+    }
+}
+
+

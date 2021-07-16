@@ -1,0 +1,31 @@
+tasks.withType(Test) {
+    testLogging {
+        events 'started', 'passed'
+    }
+}
+
+test {
+
+    reports {
+        html.enabled = false
+        junitXml.enabled = false
+    }
+
+    systemProperty 'com.athaydes.spockframework.report.outputDir', System.getProperty('reportDir', project.reportDir)
+    systemProperty 'seleniumRemoteUrl', System.getProperty('seleniumRemoteUrl')
+    systemProperty 'browserWidth', System.getProperty('browserWidth', project.browserWidth)
+    systemProperty 'browserHeight', System.getProperty('browserHeight', project.browserHeight)
+    systemProperty 'browserVersion', System.getProperty('browserVersion', project.browserVersion)
+
+    systemProperty 'geb.env', System.getProperty('browser', project.browser)
+    systemProperty 'geb.build.baseUrl', System.getProperty('appUrl', project.appUrl)
+    systemProperty 'servicesUrl', System.getProperty('servicesUrl', project.servicesUrl)
+
+    if (System.getProperty('smokeTest') != null)
+        systemProperty 'spock.configuration', 'SmokeTestOnlyFilter.groovy'
+
+    if(!'remote'.equalsIgnoreCase(System.getProperty('browser', project.browser)))
+        systemProperty "webdriver.chrome.driver", "$rootDir/lib/driver/chromedriver"
+
+    outputs.upToDateWhen { false }
+}
