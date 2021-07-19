@@ -13,16 +13,15 @@ abstract class BaseService {
     }
     def get(String path, sslTrustAllCerts = true) {
         restClient.setUrl(serviceBaseUrl)
-
         def response = restClient.get(path: path, sslTrustAllCerts: sslTrustAllCerts)
         assert response.statusCode == 200 : "Get REST call (${path}) failed"
-        return response;
+        return response
     }
     def getAll(String path, sslTrustAllCerts = true) {
         restClient.setUrl(serviceBaseUrl)
         def response = restClient.get(path: path, sslTrustAllCerts: sslTrustAllCerts)
         assert response.statusCode == 200 : "Get REST call (${path}) failed"
-        return response;
+        return response
     }
     def post(String path, Closure closure, sslTrustAllCerts = true ) {
         restClient.setUrl(serviceBaseUrl)
