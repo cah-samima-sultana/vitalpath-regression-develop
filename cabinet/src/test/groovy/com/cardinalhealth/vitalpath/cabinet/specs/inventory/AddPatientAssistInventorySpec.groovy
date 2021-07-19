@@ -42,7 +42,7 @@ class AddPatientAssistInventorySpec extends BaseSpec {
         and: "I add patient assist inventory for the selected patient"
         clickPlusButton()
         synchronized (available) {
-            available.wait();
+            available.wait()
         }
         sleep(5000)
        waitForAnimationToComplete()
