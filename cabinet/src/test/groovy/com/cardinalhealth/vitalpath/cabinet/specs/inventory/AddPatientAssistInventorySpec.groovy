@@ -48,7 +48,6 @@ class AddPatientAssistInventorySpec extends BaseSpec {
        waitForAnimationToComplete()
 
         addPatientDrug(ItemConstants.ARANESP_300mcg_55513_0111_01, InventorySegment.PATIENT_ASSIST, 100, PracticeConstants.Site_1_Layout.CABINET_A_DOOR_2_SHELF_2, true)
-
         then: "I verify that the patient assist inventory was added correctly"
         verifyPatientInventory(patient, ItemConstants.ARANESP_300mcg_55513_0111_01, InventorySegment.PATIENT_ASSIST, PracticeConstants.Site_1_Layout.CABINET_A_DOOR_2_SHELF_2, "100")
 
